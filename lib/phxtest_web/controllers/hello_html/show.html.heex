@@ -1,3 +1,22 @@
 <section>
   <h2>Hello World, from <%= @messenger %>!</h2>
+  <div :if={@is_true?}>Testing</div>
+  <%= if @is_true? do %>
+    <p>Messenger has true: <%= @messenger %></p>
+  <% else %>
+    <p>No true in the messenger: <%= @messenger %></p>
+  <% end %>
 </section>
+
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Power</th>
+  </tr>
+  <%= for number <- 1..10 do %>
+    <tr>
+      <td><%= number %></td>
+      <td><%= number * number %></td>
+    </tr>
+  <% end %>
+</table>

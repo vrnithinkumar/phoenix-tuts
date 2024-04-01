@@ -16,3 +16,15 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Docs: https://hexdocs.pm/phoenix
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
+
+## Controller
+- index - renders a list of all items of the given resource type
+- show - renders an individual item by ID
+- new - renders a form for creating a new item
+- create - receives parameters for one new item and saves it in a data store
+- edit - retrieves an individual item by ID and displays it in a form for editing
+- update - receives parameters for one edited item and saves the item to a data store
+- delete - receives an ID for an item to be deleted and deletes it from a data store
+
+### controllers and views
+In other words, HelloController requires HelloHTML, and HelloHTML requires the existence of the lib/hello_web/controllers/hello_html/ directory, which must contain the show.html.heex template.

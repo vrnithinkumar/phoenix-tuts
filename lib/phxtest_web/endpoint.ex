@@ -59,5 +59,5 @@ defmodule PhxtestWeb.Endpoint do
     """
     conn
   end
-  
+
 end

@@ -2,7 +2,7 @@ defmodule PhxtestWeb.Router do
   use PhxtestWeb, :router
 
   pipeline :browser do
-    plug :accepts, ["html"]
+    plug :accepts, ["html", "json"]
     plug :fetch_session
     plug :fetch_live_flash
     plug :put_root_layout, html: {PhxtestWeb.Layouts, :root}
