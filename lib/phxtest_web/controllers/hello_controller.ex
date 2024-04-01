@@ -3,4 +3,8 @@ defmodule PhxtestWeb.HelloController do
   def hello(conn, _params) do
     render(conn, :hello)
   end
+
+  def show(conn, %{"messenger" => messenger} = params) do
+    render(conn, :show, messenger: messenger)
+  end
 end
