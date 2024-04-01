@@ -16,8 +16,8 @@ defmodule PhxtestWeb.Router do
 
   scope "/", PhxtestWeb do
     pipe_through :browser
-    get "/hello", HelloController, :world
     get "/", PageController, :home
+    get "/hello", HelloController, :hello
   end
 
   # Other scopes may use custom stacks.
