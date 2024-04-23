@@ -6,7 +6,6 @@ defmodule PhxtestWeb.PageController do
     # so skip the default app layout.
     # render(conn, :home, layout: false)
     conn
-    |> put_flash(:error, "Let's pretend we have an error.")
     |> render(:home, layout: false)
   end
 end

@@ -10,6 +10,7 @@ defmodule PhxtestWeb.HelloController do
     conn
     |> Plug.Conn.assign(:is_true?, String.contains?(messenger, "true"))
     |> Plug.Conn.assign(:messenger, messenger)
+    |> put_layout(html: :pages)
     |> render(:show)
     # render(conn, :show, messenger: messenger, is_true?: true)
   end
