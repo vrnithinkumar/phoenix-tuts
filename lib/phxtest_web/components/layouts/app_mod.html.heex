@@ -1,0 +1,378 @@
+<header>
+  <nav class="border-b"  id="navbar">
+    <div class="px-4 md:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
+          <button
+            id="js__navbar__mobile_menu_button"
+            type="button"
+            class="inline-flex items-center justify-center rounded-md p-2 text-sky-950 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="js__navbar__mobile_menu"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle main menu</span>
+
+            <svg
+              id="js__navbar__mobile_menu_button__open"
+              class="block h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="black"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              >
+              </path>
+            </svg>
+
+            <svg
+              id="js__navbar__mobile_menu_button__close"
+              class="hidden h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="black"
+              aria-hidden="true"
+
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
+              </path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
+          <div class="flex flex-shrink-0 items-center">
+            <a href={~p"/hello"} aria-label="home page">
+              <img src={~p"/images/logo.svg"} class="h-10" aria-hidden="true" />
+            </a>
+          </div>
+          <div class="hidden md:ml-6 md:block">
+            <div class="flex space-x-4">
+              <a
+                href="https://travelermap.net/about"
+                class="text-gray-900 hover:bg-sky-100  rounded-md py-2 px-3 inline-flex items-center text-sm font-medium"
+                aria-label="Read more about the project"
+              >
+                About
+              </a>
+              <div class="relative">
+                <a
+                  id="navbar__flyout_desktop_menu_button"
+                  href="#"
+                  type="button"
+                  class="text-gray-900 hover:bg-sky-100 hover:bg-slat rounded-md py-2 px-3 inline-flex items-center text-sm font-medium gap-x-1 "
+                  aria-expanded="false"
+                  phx-click="[[&quot;show&quot;,{&quot;display&quot;:null,&quot;time&quot;:200,&quot;to&quot;:&quot;#navbar__flyout_desktop_menu&quot;,&quot;transition&quot;:[[&quot;transition&quot;,&quot;ease-out&quot;,&quot;duration-200&quot;],[&quot;opacity-0&quot;,&quot;translate-y-1&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;]]}],[&quot;set_attr&quot;,{&quot;attr&quot;:[&quot;aria-expanded&quot;,&quot;true&quot;],&quot;to&quot;:&quot;#navbar__flyout_desktop_menu_button&quot;}]]"
+                >
+                  <span>Top Lists</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+                <div
+                  id="navbar__flyout_desktop_menu"
+                  class="hidden absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4"
+                  phx-click-away="[[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#navbar__flyout_desktop_menu&quot;,&quot;transition&quot;:[[&quot;transition&quot;,&quot;ease-in&quot;,&quot;duration-150&quot;],[&quot;opacity-100&quot;,&quot;translate-y-0&quot;],[&quot;opacity-0&quot;,&quot;translate-y-1&quot;]]}],[&quot;set_attr&quot;,{&quot;attr&quot;:[&quot;aria-expanded&quot;,&quot;false&quot;],&quot;to&quot;:&quot;#navbar__flyout_desktop_menu_button&quot;}]]"
+                >
+                  <div class="w-screen max-w-min flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+                    <div class="p-4">
+                      <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-100">
+                        <div class="flex items-center">
+                          <a
+                            href="https://travelermap.net/parks/usa"
+                            class="font-semibold text-gray-900"
+                            aria-label="USA parks"
+                          >
+                            Top 10 <span class="absolute inset-0"></span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-100">
+                        <div class="flex items-center">
+                          <a
+                            href="https://travelermap.net/parks/canada"
+                            class="font-semibold text-gray-900"
+                            aria-label="Canada parks"
+                          >
+                            All <span class="absolute inset-0"></span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-100">
+                        <div class="flex items-center">
+                          <a
+                            href="https://travelermap.net/parks/united-kingdom"
+                            class="font-semibold text-gray-900"
+                            aria-label="United Kingdom parks"
+                          >
+                            Topics <span class="absolute inset-0"></span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-100">
+                        <div class="flex items-center">
+                          <a
+                            href="https://travelermap.net/parks/poland"
+                            class="font-semibold text-gray-900"
+                            aria-label="Poland parks"
+                          >
+                            Languages <span class="absolute inset-0"></span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-between">
+          <div>
+            <div
+              class="flex items-center lg:w-full"
+              data-phx-session="SFMyNTY.g2gDaAJhBXQAAAAIZAACaWRtAAAAFHBoeC1GOGxNMjVrYUxtMktoeXBDZAAMbGl2ZV9zZXNzaW9uZAADbmlsZAAKcGFyZW50X3BpZGQAA25pbGQACHJvb3RfcGlkZAADbmlsZAAJcm9vdF92aWV3ZAAgRWxpeGlyLlRyYXZlbGVyV2ViLlNlYXJjaGJhckxpdmVkAAZyb3V0ZXJkAANuaWxkAAdzZXNzaW9udAAAAAJtAAAAB2NvbnRleHR0AAAAAWQAA2FsbGQABHRydWVtAAAACnRleHRfY29sb3JtAAAABXdoaXRlZAAEdmlld2QAIEVsaXhpci5UcmF2ZWxlcldlYi5TZWFyY2hiYXJMaXZlbgYASVOBEY8BYgABUYA.3hyI36dIAo23SsaQd1ZM8xqTHkyTb4BmsR4ad73glYg"
+              data-phx-static="SFMyNTY.g2gDaAJhBXQAAAADZAAKYXNzaWduX25ld2pkAAVmbGFzaHQAAAAAZAACaWRtAAAAFHBoeC1GOGxNMjVrYUxtMktoeXBDbgYASVOBEY8BYgABUYA.bhL4HzVBzOPqHm_Gl39wWteiwqIRnslLmsbcIsAY6tE"
+              id="phx-F8lM25kaLm2KhypC"
+            >
+              <button
+                type="button"
+                class="text-gray-800 bg-none ring-black hover:ring-zinc-400 hover:bg-zinc-50/10 block lg:hidden flex p-1 items-center justify-center rounded-md transition focus:[&amp;:not(:focus-visible)]:outline-none"
+                aria-label="Search an influencer"
+                phx-click="[[&quot;show&quot;,{&quot;display&quot;:null,&quot;time&quot;:200,&quot;to&quot;:&quot;#searchbox_container&quot;,&quot;transition&quot;:[[&quot;transition&quot;,&quot;ease-out&quot;,&quot;duration-200&quot;],[&quot;opacity-0&quot;,&quot;scale-95&quot;],[&quot;opacity-100&quot;,&quot;scale-100&quot;]]}],[&quot;show&quot;,{&quot;display&quot;:null,&quot;time&quot;:200,&quot;to&quot;:&quot;#searchbar-dialog&quot;,&quot;transition&quot;:[[&quot;transition&quot;,&quot;ease-in&quot;,&quot;duration-100&quot;],[&quot;opacity-0&quot;],[&quot;opacity-100&quot;]]}],[&quot;add_class&quot;,{&quot;names&quot;:[&quot;overflow-hidden&quot;],&quot;time&quot;:200,&quot;to&quot;:&quot;body&quot;,&quot;transition&quot;:[[],[],[]]}],[&quot;focus&quot;,{&quot;to&quot;:&quot;#search-input&quot;}],[&quot;dispatch&quot;,{&quot;event&quot;:&quot;searchbar:open&quot;,&quot;to&quot;:null}]]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                  />
+                </svg>
+              </button>
+              <div class="hidden lg:block lg:max-w-xs lg:flex-auto">
+                <button
+                  type="button"
+                  class="hidden text-gray-500 bg-white hover:ring-gray-500 ring-gray-300 h-8 w-full items-center gap-2 rounded-md pl-2 pr-3 text-sm ring-1 transition lg:flex justify-between focus:[&amp;:not(:focus-visible)]:outline-none"
+                  phx-click="[[&quot;show&quot;,{&quot;display&quot;:null,&quot;time&quot;:200,&quot;to&quot;:&quot;#searchbox_container&quot;,&quot;transition&quot;:[[&quot;transition&quot;,&quot;ease-out&quot;,&quot;duration-200&quot;],[&quot;opacity-0&quot;,&quot;scale-95&quot;],[&quot;opacity-100&quot;,&quot;scale-100&quot;]]}],[&quot;show&quot;,{&quot;display&quot;:null,&quot;time&quot;:200,&quot;to&quot;:&quot;#searchbar-dialog&quot;,&quot;transition&quot;:[[&quot;transition&quot;,&quot;ease-in&quot;,&quot;duration-100&quot;],[&quot;opacity-0&quot;],[&quot;opacity-100&quot;]]}],[&quot;add_class&quot;,{&quot;names&quot;:[&quot;overflow-hidden&quot;],&quot;time&quot;:200,&quot;to&quot;:&quot;body&quot;,&quot;transition&quot;:[[],[],[]]}],[&quot;focus&quot;,{&quot;to&quot;:&quot;#search-input&quot;}],[&quot;dispatch&quot;,{&quot;event&quot;:&quot;searchbar:open&quot;,&quot;to&quot;:null}]]"
+                  id="searbar-open-button"
+                >
+                  <div class="flex items-center pr-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      class="w-4 h-4 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                      />
+                    </svg>
+                    Search an influencer
+                  </div>
+                  <kbd class="ml-auto text-3xs opacity-80">
+                    <kbd class="font-sans">⌘</kbd><kbd class="font-sans">K</kbd>
+                  </kbd>
+                </button>
+              </div>
+              <div
+                id="searchbar-dialog"
+                class="hidden fixed inset-0 z-50"
+                role="dialog"
+                aria-modal="true"
+                phx-window-keydown="[[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#searchbar-searchbox_container&quot;,&quot;transition&quot;:[[&quot;transition&quot;,&quot;ease-in&quot;,&quot;duration-100&quot;],[&quot;opacity-100&quot;,&quot;scale-100&quot;],[&quot;opacity-0&quot;,&quot;scale-95&quot;]]}],[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#searchbar-dialog&quot;,&quot;transition&quot;:[[&quot;transition&quot;,&quot;ease-in&quot;,&quot;duration-100&quot;],[&quot;opacity-100&quot;],[&quot;opacity-0&quot;]]}],[&quot;remove_class&quot;,{&quot;names&quot;:[&quot;overflow-hidden&quot;],&quot;time&quot;:200,&quot;to&quot;:&quot;body&quot;,&quot;transition&quot;:[[],[],[]]}]]"
+                phx-key="escape"
+              >
+                <div class="fixed inset-0 bg-zinc-600/30 backdrop-blur-sm opacity-100"></div>
+                <div class="fixed inset-0 overflow-y-auto px-4 py-4 sm:py-20 sm:px-6 md:py-32 lg:px-8 lg:py-[15vh]">
+                  <div id="searchbar-modal-wrap" phx-hook="Phoenix.FocusWrap">
+                    <span id="searchbar-modal-wrap-start" tabindex="0" aria-hidden="true"></span>
+                    <div
+                      id="searchbox_container"
+                      class="mx-auto overflow-hidden rounded-lg bg-zinc-50 shadow-xl ring-zinc-900/7.5 sm:max-w-xl opacity-100 scale-100"
+                      phx-hook="SearchBar"
+                    >
+                      <div
+                        role="combobox"
+                        aria-haspopup="listbox"
+                        phx-click-away="[[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#searchbar-searchbox_container&quot;,&quot;transition&quot;:[[&quot;transition&quot;,&quot;ease-in&quot;,&quot;duration-100&quot;],[&quot;opacity-100&quot;,&quot;scale-100&quot;],[&quot;opacity-0&quot;,&quot;scale-95&quot;]]}],[&quot;hide&quot;,{&quot;time&quot;:200,&quot;to&quot;:&quot;#searchbar-dialog&quot;,&quot;transition&quot;:[[&quot;transition&quot;,&quot;ease-in&quot;,&quot;duration-100&quot;],[&quot;opacity-100&quot;],[&quot;opacity-0&quot;]]}],[&quot;remove_class&quot;,{&quot;names&quot;:[&quot;overflow-hidden&quot;],&quot;time&quot;:200,&quot;to&quot;:&quot;body&quot;,&quot;transition&quot;:[[],[],[]]}]]"
+                      >
+                        <form
+                          id="searchbar-live-form"
+                          action
+                          novalidate
+                          role="search"
+                          phx-change="change"
+                          phx-hook="SearchBarForm"
+                        >
+                          <div class="group relative flex h-12">
+                            <svg
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              aria-hidden="true"
+                              class="pointer-events-none absolute left-3 top-0 h-full w-5 stroke-zinc-500"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M12.01 12a4.25 4.25 0 1 0-6.02-6 4.25 4.25 0 0 0 6.02 6Zm0 0 3.24 3.25"
+                              >
+                              </path>
+                            </svg>
+                            <input
+                              id="search-input"
+                              name="search[query]"
+                              class="flex-auto rounded-lg appearance-none bg-transparent pl-10 text-zinc-900 outline-none focus:outline-none border-slate-200 focus:border-slate-200 focus:ring-0 focus:shadow-none placeholder:text-zinc-500 focus:w-full focus:flex-none sm:text-sm [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden [&::-webkit-search-results-button]:hidden [&::-webkit-search-results-decoration]:hidden pr-4"
+                              style
+                              aria-autocomplete="both"
+                              aria-controls="searchbox__results_list"
+                              autocomplete="off"
+                              autocorrect="off"
+                              autocapitalize="off"
+                              enterkeyhint="search"
+                              spellcheck="false"
+                              placeholder="Find something"
+                              type="search"
+                              value
+                              tabindex="0"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <span id="searchbar-modal-wrap-end" tabindex="0" aria-hidden="true"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            href="https://travelermap.net/register"
+            class="ml-4 text-sm text-gray-900 hover:underline hidden sm:block"
+          >
+            Sign up
+          </a>
+          <a
+            href="https://travelermap.net/login"
+            class="inline-flex phx-submit-loading:opacity-75 rounded-lg py-2 px-4 bg-sky-200 hover:bg-sky-400 text-sm font-medium leading-5 text-zinc-800 active:text-zinc-800/80 ml-4 no-underline"
+          >
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative hidden md:hidden" id="js__navbar__mobile_menu">
+      <div class="space-y-1 px-2 pt-2 pb-3">
+        <a
+          href="https://travelermap.net/about"
+          class="text-white hover:bg-slate-700 block px-3 py-2 rounded-md text-base font-medium"
+          aria-label="Read more about the project"
+        >
+          About
+        </a>
+
+        <a
+          href="https://travelermap.net/parks/usa"
+          class="text-white hover:bg-slate-700 block px-3 py-2 rounded-md text-base font-medium"
+          aria-label="USA parks"
+        >
+          USA Parks
+        </a>
+
+        <a
+          href="https://travelermap.net/parks/canada"
+          class="text-white hover:bg-slate-700 block px-3 py-2 rounded-md text-base font-medium"
+          aria-label="Canada parks"
+        >
+          Canada Parks
+        </a>
+
+        <a
+          href="https://travelermap.net/parks/united-kingdom"
+          class="text-white hover:bg-slate-700 block px-3 py-2 rounded-md text-base font-medium"
+          aria-label="United Kingdom parks"
+        >
+          United Kingdom Parks
+        </a>
+
+        <a
+          href="https://travelermap.net/parks/poland"
+          class="text-white hover:bg-slate-700 block px-3 py-2 rounded-md text-base font-medium"
+          aria-label="Poland parks"
+        >
+          Poland Parks
+        </a>
+
+        <a
+          href="https://travelermap.net/national-parks"
+          class="text-white hover:bg-slate-700 block px-3 py-2 rounded-md text-base font-medium"
+          aria-label="National Parks in the world"
+        >
+          World National Parks
+        </a>
+        <a
+          href="https://twitter.com/TravelerMapNet"
+          rel="nofollow"
+          target="_blank"
+          class="text-white hover:bg-slate-700 block px-3 py-2 rounded-md text-base font-medium"
+        >
+          <span class="sr-only">Twitter</span>
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+            </path>
+          </svg>
+        </a>
+        <a
+          href="https://www.facebook.com/travelermap.net"
+          rel="nofollow"
+          target="_blank"
+          class="text-white hover:bg-slate-700 block px-3 py-2 rounded-md text-base font-medium"
+        >
+          <span class="sr-only">Facebook</span>
+          <svg class="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              fill-rule="evenodd"
+              d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+              clip-rule="evenodd"
+            >
+            </path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+  <div class="mx-auto ">
+    <%= @inner_content %>
+  </div>
+</main>

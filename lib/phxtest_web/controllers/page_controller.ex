@@ -6,6 +6,7 @@ defmodule PhxtestWeb.PageController do
     # so skip the default app layout.
     # render(conn, :home, layout: false)
     conn
-    |> render(:home, layout: false)
+    |> put_layout(html: :app_mod)
+    |> render(:home)
   end
 end
