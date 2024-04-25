@@ -20,6 +20,10 @@ defmodule PhxtestWeb.Router do
     get "/", PageController, :home
     get "/hello", HelloController, :hello
     get "/hello/:messenger", HelloController, :show
+    get "/about", InfoController, :about
+    get "/contact", InfoController, :contact
+    get "/terms", InfoController, :terms
+    get "/privacy", InfoController, :privacy
   end
 
   # Other scopes may use custom stacks.
