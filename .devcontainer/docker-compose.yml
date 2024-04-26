@@ -19,7 +19,7 @@ services:
       # - ../:/:cached
 
       # This lets you avoid setting up Git again in the container
-      - ~/.gitconfig:/root/.gitconfig
+      - ~/.gitconfig:/etc/gitconfig
     depends_on:
       - db
 
