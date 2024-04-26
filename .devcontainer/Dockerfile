@@ -13,10 +13,9 @@ RUN apt-get update && \
     apt-get install -y rename && \
     apt-get install -y zsh
 
-RUN curl -sL https://deb.nodesource.com/setup_15.x  | bash -
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
 
-RUN apt-get update && \
-    apt-get install -y nodejs
+RUN apt-get update && \ apt-get install -y nodejs
 
 # RUN gem install htmlbeautifier
 
