@@ -1,29 +1,39 @@
-FROM elixir:1.16.2-slim
+FROM elixir:1.16.1
 
-ARG USERNAME=vscode
+# Build Args
+ARG PHOENIX_VERSION=1.7.12
+ARG NODE_VERSION=20.10.0
 
-RUN apt-get update && \
-    apt-get install -y postgresql-client && \
-    apt-get install -y inotify-tools && \
-    apt-get install -y git && \
-    apt-get install -y curl && \
-    apt-get install -y wget && \
-    apt-get install -y gnupg2 && \
-    # apt-get install -y rubygems && \
-    apt-get install -y rename && \
-    apt-get install -y zsh
+# Dependencies
+RUN apt update \
+  && apt upgrade -y \
+  && apt install -y bash curl git build-essential inotify-tools
 
-RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+# NodeJS
+ENV NVM_DIR /opt/nvm
+RUN mkdir -p ${NVM_DIR} \
+  && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash \
+  && . $NVM_DIR/nvm.sh \
+  && nvm install ${NODE_VERSION} \
+  && nvm alias default ${NODE_VERSION} \
+  && nvm use default \
+  && npm install -g yarn
 
-RUN apt-get update && \ apt-get install -y nodejs
+ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
+ENV PATH $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 
-# RUN gem install htmlbeautifier
+# Phoenix
+RUN mix local.hex --force
+RUN mix archive.install --force hex phx_new ${PHOENIX_VERSION}
+RUN mix local.rebar --force
 
-COPY setup-container.sh .
-RUN bash ./setup-container.sh
+# App Directory
+# ENV APP_HOME /app
+# RUN mkdir -p $APP_HOME
+# WORKDIR $APP_HOME
 
-ENV MIX_HOME=/root/.mix
-ENV HEX_HOME=/root/.hex
+# App Port
+EXPOSE 4000
 
-RUN mix local.hex --force && \
-    mix local.rebar --force
+# Default Command
+CMD ["mix", "phx.server"]
