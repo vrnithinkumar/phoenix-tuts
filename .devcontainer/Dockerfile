@@ -1,11 +1,10 @@
-FROM elixir:1.12.2-slim
+FROM elixir:1.16.2-slim
 
 ARG USERNAME=vscode
 
 RUN apt-get update && \
     apt-get install -y postgresql-client && \
     apt-get install -y inotify-tools && \
-    apt-get install -y vim && \
     apt-get install -y git && \
     apt-get install -y curl && \
     apt-get install -y wget && \
