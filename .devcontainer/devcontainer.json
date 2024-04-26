@@ -2,7 +2,7 @@
   "name": "Docker Phoenix Tuts",
   "dockerComposeFile": "docker-compose.yml",
   "service": "app",
-  "workspaceFolder": "/",
+  "workspaceFolder": "/workspaces/phoenix-tuts/",
   "forwardPorts": [4000],
   "shutdownAction": "stopCompose",
 
